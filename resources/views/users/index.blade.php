@@ -26,7 +26,7 @@
                 <td>{{ $user->role }}</td>
                 <td>{{$user->note ? $user->note->body : ''  }}</td>
                 <td>{{$user->tags ?  $user->tags->pluck('name')->implode(', ') : ''  }}</td>
-                <td>{{ $user->email }}</td>
+                
 
 
             <td class="d-inline-flex p-2">

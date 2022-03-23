@@ -19,7 +19,11 @@ class MessagesController extends Controller
     public function index()
     {
         // $messages = DB::table('messages')->get();
-        $messages = Message::with(['user', 'note', 'tags'])->get();
+        $messages = Message::with(['user', 'note', 'tags'])
+            ->orderBy('created_at', request('sorted', 'DESC'))
+            ->simplePaginate(10);
+
+        
 
         return view('messages.index', compact('messages'));
     }

@@ -29,12 +29,12 @@ class PagesController extends Controller
 
     public function saludo($nombre = "Invitado")
     {
-        $html = "<h2>Contenido html</h2>";
+        $html = "<h2>Bienvenido a mi página de Laravel</h2>";
 
         $consolas =[
-            "Play Station 4",
-            "Xbox",
-            "Wii"
+            "PHP",
+            "Laravel",
+            "Bootstrap"
         ];
 
            // return view('saludo', ['nombre' => $nombre]);
